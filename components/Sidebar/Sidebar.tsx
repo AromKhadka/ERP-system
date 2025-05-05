@@ -19,7 +19,7 @@ const sidebarData: SidebarItemType[] = [
       children: [
         {
           title: 'Dashboard',
-          path: '/pharmacy/dashboard',
+          path: '/Pharmacy/dashboard',
           icon: <FaChartLine />,
         },
         {
