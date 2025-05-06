@@ -6,7 +6,7 @@ import Link from 'next/link'
 export type SidebarItemType = {
   title: string
   path?: string
-  icon?: JSX.Element
+  icon?: React.ElementType
   children?: SidebarItemType[] // Optional children that can be nested items
 }
 
@@ -30,7 +30,7 @@ export default function SidebarItem({ item }: SidebarItemProps) {
           className="w-full flex items-center justify-between px-2 py-1 hover:bg-gray-700 rounded text-white"
         >
           <span className="flex items-center gap-2">
-            {item.icon && <span>{item.icon}</span>}
+          {item.icon && <item.icon className="w-4 h-4" />}
             {item.title}
           </span>
           <span>{open ? '▾' : '▸'}</span> {/* Arrow for expand/collapse */}
@@ -40,7 +40,7 @@ export default function SidebarItem({ item }: SidebarItemProps) {
           href={item.path || '#'}
           className="block px-2 py-1 hover:bg-gray-700 rounded text-white flex items-center gap-2"
         >
-          {item.icon && <span>{item.icon}</span>}
+          {item.icon && <item.icon className="w-4 h-4" />}
           {item.title}
         </Link>
       )}

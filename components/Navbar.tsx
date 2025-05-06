@@ -1,4 +1,4 @@
-
+'use client'
 export default function Navbar() {
     return (
       <nav className="bg-white px-6 py-4 shadow-md flex items-center justify-between">
